@@ -10,14 +10,52 @@ html {
 }
 
 body {
-  margin: 20px 0;
+  margin: 0;
   padding: 0;
   text-align: center;
   line-height: 1;
   font-family: "Roboto", sans-serif;
-  color: #393993;
-  background-color: #fbfbfb;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(247, 244, 244);
+  color: rgb(74, 86, 90);
+}
+
+table {
+  margin: 40px 0;
+  background: #f2f5f6;
+  background: -moz-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #f2f5f6),
+    color-stop(37%, #e3eaed),
+    color-stop(100%, #c8d7dc)
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #f2f5f6 0%,
+    #e3eaed 37%,
+    #c8d7dc 100%
+  );
+  background: -o-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+  background: -ms-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 );
+  background: linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+}
+
+table th {
+  color: rgb(5, 1, 4);
+  font-weight: 800;
+  font-size: 28px;
+  @media screen and (max-width: 580px) {
+    font-size: 18px;
+  }
+}
+
+table tr {
+  font-size: 14px;
+  font-weight: bold;
+  @media screen and (max-width: 580px) {
+    font-size: 14px;
+  }
 }

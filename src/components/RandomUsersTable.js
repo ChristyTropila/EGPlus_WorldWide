@@ -1,12 +1,13 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import '../App.scss';
 import Container from 'react-bootstrap/Container'
 
 
 export const RandomUsersTable = ({ userData }) => {
 
     return (
-        <Container fluid>
+        <>
             <Table responsive>
                 <thead>
                     <tr>
@@ -27,6 +28,6 @@ export const RandomUsersTable = ({ userData }) => {
                   ))}  
                 </tbody>
             </Table>
-        </Container>
+        </>
     )
 }
