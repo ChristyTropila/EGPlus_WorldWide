@@ -79,6 +79,11 @@ table tr:nth-child(even) {
   color: black;
 }
 
+table thead tr:hover {
+  cursor: default;
+  background-color: white;
+}
+
 table tr:hover {
   cursor: pointer;
   background-color: $purpleColor;
