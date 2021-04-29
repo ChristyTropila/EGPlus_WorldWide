@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-
 export const PopupModal = ({ userData, closeModal }) => {
     console.log(userData)
     return (
@@ -14,7 +13,7 @@ export const PopupModal = ({ userData, closeModal }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="modalBodyContainer">
-                        <img src={userData.picture.large} alt="User Profile Picture" />
+                        <img src={userData.picture.large} alt="User" />
                         <div className="contactInfoContainer">
                             <h5>
                                 Contact Information
@@ -30,7 +29,7 @@ export const PopupModal = ({ userData, closeModal }) => {
                 <Modal.Footer>
                     <Button className="modalButton" variant="secondary" onClick={closeModal}>
                         Close
-          </Button>
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>

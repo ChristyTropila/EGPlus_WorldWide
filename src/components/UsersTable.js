@@ -9,7 +9,6 @@ export const UsersTable = ({ userData }) => {
     const [openModal, setOpenModal] = useState(false);
     const [clickedUser, setClickedUser] = useState();
 
-
     const handleUserClicked = (userData) => {
         setClickedUser(userData);
         setOpenModal(!openModal);
@@ -19,8 +18,6 @@ export const UsersTable = ({ userData }) => {
         setOpenModal(!openModal);
         setClickedUser({})
     };
-
-    console.log(openModal)
 
     return (
         <Container className="tableContainer">
@@ -38,7 +35,7 @@ export const UsersTable = ({ userData }) => {
                 </thead>
                 <tbody>
                     {userData?.sort((a, b) => a.name.last.localeCompare(b.name.last)).map((data, index) => (
-                        <tr  onClick={() => handleUserClicked(data)} >
+                        <tr key={index} onClick={() => handleUserClicked(data)} >
                             <td className="align-middle">{data.name.first} {data.name.last}</td>
                             <td className="align-middle" >{new Date(data.dob.date).toDateString().slice(3)}</td>
                             <td className="align-middle" >{data.location.state}</td>
