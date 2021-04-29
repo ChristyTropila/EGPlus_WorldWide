@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import '../App.scss';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
+import { PopupModal } from './PopupModal';
 
 
 export const UsersTable = ({ userData }) => {
@@ -14,11 +15,19 @@ export const UsersTable = ({ userData }) => {
         setOpenModal(!openModal);
     };
 
-    console.log(clickedUser)
+    const handleModalClose = () => {
+        setOpenModal(!openModal);
+        setClickedUser({})
+    };
+
+    console.log(openModal)
 
     return (
         <Container className="tableContainer">
-            <Table responsive striped bordered size="md">
+            {openModal && (
+                <PopupModal userData={clickedUser} closeModal={handleModalClose} />
+            )}
+            <Table responsive bordered size="md">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -28,14 +37,14 @@ export const UsersTable = ({ userData }) => {
                     </tr>
                 </thead>
                 <tbody>
-                  {userData?.sort((a, b) => a.name.last.localeCompare(b.name.last)).map((data, index) => (
-                     <tr >
-                          <td onClick={() => handleUserClicked(data)}>{data.name.first} {data.name.last}</td>
-                          <td>{new Date(data.dob.date).toDateString().slice(3)}</td>
-                          <td>{data.location.state}</td>
-                          <td>{data.location.country}</td>
-                      </tr>
-                  ))}  
+                    {userData?.sort((a, b) => a.name.last.localeCompare(b.name.last)).map((data, index) => (
+                        <tr  onClick={() => handleUserClicked(data)} >
+                            <td className="align-middle">{data.name.first} {data.name.last}</td>
+                            <td className="align-middle" >{new Date(data.dob.date).toDateString().slice(3)}</td>
+                            <td className="align-middle" >{data.location.state}</td>
+                            <td className="align-middle">{data.location.country}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </Table>
         </Container>

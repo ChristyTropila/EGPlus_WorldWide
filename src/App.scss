@@ -1,7 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 
+/*****Styling Variables*****/
 $purpleColor: rgba(47, 24, 68, 0.665);
 
+/*****Global Styling******/
 html {
   margin: 0;
   padding: 0;
@@ -12,12 +14,13 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+/*****Header Styling*****/
 h1 {
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
   font-size: 5vh;
-  padding: 20px 15px;
+  padding: 20px 20px;
   border-bottom-right-radius: 10px;
   color: white;
   background-color: $purpleColor;
@@ -25,6 +28,8 @@ h1 {
   box-shadow: 0 8px 8px 0 rgba(161, 24, 24, 0.2),
     0 6px 20px 0 rgba(50, 111, 223, 0.19);
 }
+
+/******User Table Styling******/
 
 .tableContainer {
   width: 60%;
@@ -42,19 +47,12 @@ table td {
   transition: background-color 0.5s ease;
 }
 
-table td:nth-child(1):hover {
-  cursor: pointer;
-  background-color: $purpleColor;
-  color: white;
-}
-
 table th {
   color: black;
-  font-weight: 800;
+  font-weight: bolder;
   font-size: 28px;
-
   @media screen and (max-width: 580px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -62,10 +60,67 @@ table tr {
   font-size: 14px;
   font-weight: bold;
   @media screen and (max-width: 580px) {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
 table tr:nth-child(odd) {
   color: $purpleColor;
+}
+
+table tr:nth-child(even) {
+  background-color: rgb(233, 231, 231);
+  color: black;
+}
+
+table tr:hover {
+  cursor: pointer;
+  background-color: $purpleColor;
+  color: white;
+}
+
+/******Modal Styling******/
+
+.modalHeader {
+  color: $purpleColor;
+  font-weight: bolder;
+}
+
+.modalBodyContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  @media screen and (max-width: 580px) {
+    justify-content: flex-start;
+    align-content: center;
+  }
+}
+.contactInfoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  @media screen and (max-width: 580px) {
+    margin: 0;
+  }
+}
+.contactInfoContainer h5 {
+  font-weight: bold;
+  padding: 0;
+}
+
+.contactInfoContainer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactInfoContainer li {
+  margin: 5px 0;
+  @media screen and (max-width: 580px) {
+    font-size: 12px;
+  }
+}
+
+.modalButton {
+  background-color: $purpleColor;
 }

@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container'
 export const Header = () => {
 
 
-    return(
+    return (
         <>
-            <h1>Random Users Database</h1>
+            <h1>Random User Database</h1>
         </>
     )
 }

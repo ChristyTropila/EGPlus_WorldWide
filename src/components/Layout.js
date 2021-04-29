@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Header } from './Header';
-import {UsersTable} from './UsersTable';
+import { UsersTable } from './UsersTable';
 
 
 export const Layout = () => {
@@ -14,7 +14,7 @@ export const Layout = () => {
             .then(userData => {
                 setRandomUserData(userData.results)
             }).catch((err) => {
-                console.log( `Error: ${err}` );
+                console.log(`Error: ${err}`);
             })
     }, []);
 
@@ -22,12 +22,12 @@ export const Layout = () => {
 
     return (
         <>
-                <header>
-                    <Header />
-                </header>
-                <section>
-                    <UsersTable userData={randomUserData} />
-                </section>
-       </>
+            <header>
+                <Header />
+            </header>
+            <section>
+                <UsersTable userData={randomUserData} />
+            </section>
+        </>
     )
 }
