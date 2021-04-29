@@ -16,9 +16,7 @@ export const Layout = () => {
                 console.log(`Error: ${err}`);
             })
     }, []);
-
-    console.log(randomUserData)
-
+    
     return (
         <>
             <header>
