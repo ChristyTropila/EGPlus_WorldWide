@@ -1,52 +1,58 @@
+@import "~bootstrap/scss/bootstrap";
+
+$purpleColor: rgba(47, 24, 68, 0.665);
+
 html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  padding: 0;
-  text-align: center;
-  line-height: 1;
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(247, 244, 244);
-  color: rgb(74, 86, 90);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 5vh;
+  padding: 20px 15px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background-color: $purpleColor;
+  mix-blend-mode: darken;
+  box-shadow: 0 8px 8px 0 rgba(161, 24, 24, 0.2),
+    0 6px 20px 0 rgba(50, 111, 223, 0.19);
+}
+
+.tableContainer {
+  width: 60%;
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 }
 
 table {
   margin: 40px 0;
-  background: #f2f5f6;
-  background: -moz-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #f2f5f6),
-    color-stop(37%, #e3eaed),
-    color-stop(100%, #c8d7dc)
-  );
-  background: -webkit-linear-gradient(
-    top,
-    #f2f5f6 0%,
-    #e3eaed 37%,
-    #c8d7dc 100%
-  );
-  background: -o-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
-  background: -ms-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 );
-  background: linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+  text-align: center;
+}
+
+table td {
+  transition: background-color 0.5s ease;
+}
+
+table td:nth-child(1):hover {
+  cursor: pointer;
+  background-color: $purpleColor;
+  color: white;
 }
 
 table th {
-  color: rgb(5, 1, 4);
+  color: black;
   font-weight: 800;
   font-size: 28px;
+
   @media screen and (max-width: 580px) {
     font-size: 18px;
   }
@@ -58,4 +64,8 @@ table tr {
   @media screen and (max-width: 580px) {
     font-size: 14px;
   }
+}
+
+table tr:nth-child(odd) {
+  color: $purpleColor;
 }
