@@ -90,9 +90,9 @@ table tr:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 5px;
   @media screen and (max-width: 580px) {
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
   }
 }
@@ -101,12 +101,16 @@ table tr:hover {
   flex-direction: column;
   margin: 0 10px;
   @media screen and (max-width: 580px) {
-    margin: 0;
+    text-align: center;
   }
 }
 .contactInfoContainer h5 {
   font-weight: bold;
   padding: 0;
+  @media screen and (max-width: 580px) {
+    font-size: 16px;
+    margin-top: 10px;
+  }
 }
 
 .contactInfoContainer ul {
@@ -118,6 +122,7 @@ table tr:hover {
   margin: 5px 0;
   @media screen and (max-width: 580px) {
     font-size: 12px;
+    margin: 0;
   }
 }
 
