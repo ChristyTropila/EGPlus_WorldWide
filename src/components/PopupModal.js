@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 export const PopupModal = ({ userData, closeModal }) => {
-    console.log(userData)
+
     return (
         <>
 
