@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Header } from './Header';
 import { UsersTable } from './UsersTable';
 
-
 export const Layout = () => {
     const [randomUserData, setRandomUserData] = useState();
 
@@ -16,7 +15,7 @@ export const Layout = () => {
                 console.log(`Error: ${err}`);
             })
     }, []);
-    
+
     return (
         <>
             <header>

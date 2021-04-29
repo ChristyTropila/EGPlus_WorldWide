@@ -4,7 +4,6 @@ import '../App.scss';
 import Container from 'react-bootstrap/Container';
 import { PopupModal } from './PopupModal';
 
-
 export const UsersTable = ({ userData }) => {
     const [openModal, setOpenModal] = useState(false);
     const [clickedUser, setClickedUser] = useState();

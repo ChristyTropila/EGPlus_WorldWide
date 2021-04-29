@@ -6,7 +6,6 @@ export const PopupModal = ({ userData, closeModal }) => {
 
     return (
         <>
-
             <Modal show={true} onHide={closeModal} centered>
                 <Modal.Header closeButton>
                     <Modal.Title className="modalHeader">{userData.name.first} {userData.name.last} </Modal.Title>
