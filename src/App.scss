@@ -27,6 +27,12 @@ h1 {
   mix-blend-mode: darken;
   box-shadow: 0 8px 8px 0 rgba(161, 24, 24, 0.2),
     0 6px 20px 0 rgba(50, 111, 223, 0.19);
+  @media screen and (max-width: 580px) {
+    border-bottom-right-radius: 0;
+    width: 100%;
+    font-size: 3vh;
+    text-align: center;
+  }
 }
 
 /******User Table Styling******/
